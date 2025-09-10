@@ -337,15 +337,3 @@ We welcome contributions! To get started:
 ## 📝 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🆘 Support
-
-For issues and support:
-- 💬 **Issues**: [GitHub Issues](https://github.com/your-username/arugacyber-blog-creator/issues)
-- 📧 **Email**: support@arugacyber.com
-
----
-
-**Built with ❤️ for the cybersecurity community**
-
-*Helping security professionals stay informed with AI-powered intelligence*
