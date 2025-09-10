@@ -1,8 +1,8 @@
-# ArugaCyber Blog Post Creator
+# Blog Post Creator
 
-🔐 **AI-Powered Cybersecurity Blog Generation System**
+🔐 **AI-Powered security Blog Generation System**
 
-An intelligent Azure Function that automatically generates professional cybersecurity blog posts by crawling RSS feeds, extracting full article content, and using AI to create comprehensive, technically accurate analysis articles.
+An intelligent Azure Function that automatically generates professional security blog posts by crawling RSS feeds, extracting full article content, and using AI to create comprehensive, technically accurate analysis articles.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Azure Functions](https://img.shields.io/badge/Azure-Functions-blue.svg)](https://azure.microsoft.com/en-us/services/functions/)
@@ -90,11 +90,11 @@ sequenceDiagram
 
 ## ⚡ Key Features
 
-- 🤖 **AI-Powered Analysis**: Uses GPT-4 to generate comprehensive cybersecurity analysis
+- 🤖 **AI-Powered Analysis**: Uses GPT-4 to generate comprehensive security analysis
 - 🌐 **Smart Web Crawling**: Extracts full article content from RSS feed links
 - 🎨 **Professional Styling**: Dark theme with red accents, mobile responsive
 - 📊 **Threat Assessment**: Automatically categorizes threat levels (Critical/High/Medium/Low)
-- 🏷️ **Keyword Extraction**: Identifies relevant cybersecurity terms and topics
+- 🏷️ **Keyword Extraction**: Identifies relevant security terms and topics
 - ☁️ **Azure Integration**: Seamless deployment with Azure Functions and Blob Storage
 - 🔧 **Configurable Sources**: Easy to add/remove RSS feeds and customize behavior
 - 📱 **Mobile Optimized**: Responsive design that works on all devices
@@ -111,8 +111,8 @@ sequenceDiagram
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/your-username/arugacyber-blog-creator.git
-cd arugacyber-blog-creator
+git clone https://github.com/your-username/blog-creator.git
+cd blog-creator
 ```
 
 ### 2. Configure Environment
@@ -144,35 +144,35 @@ Using Azure CLI:
 az login
 
 # Create resource group
-az group create --name arugacyber-rg --location "West Europe"
+az group create --name -rg --location "West Europe"
 
 # Create storage account
 az storage account create \
-  --name arugacyberstorage \
-  --resource-group arugacyber-rg \
+  --name storage \
+  --resource-group -rg \
   --location "West Europe" \
   --sku Standard_LRS
 
 # Create function app
 az functionapp create \
-  --resource-group arugacyber-rg \
+  --resource-group -rg \
   --consumption-plan-location "West Europe" \
   --runtime python \
   --runtime-version 3.8 \
   --functions-version 4 \
-  --name arugacyber-functions \
-  --storage-account arugacyberstorage
+  --name -functions \
+  --storage-account storage
 
 # Deploy function
-func azure functionapp publish arugacyber-functions
+func azure functionapp publish -functions
 ```
 
 ### 4. Configure Application Settings
 
 ```bash
 az functionapp config appsettings set \
-  --name arugacyber-functions \
-  --resource-group arugacyber-rg \
+  --name -functions \
+  --resource-group -rg \
   --settings \
   "OPENAI_API_KEY=your_api_key" \
   "RSS_FEEDS=https://krebsonsecurity.com/feed/,https://www.bleepingcomputer.com/feed/"
@@ -303,7 +303,7 @@ Blog posts follow this structure:
 The system provides comprehensive logging:
 
 ```
-🚀 ArugaCyber Article Generator started
+🚀  Article Generator started
 📡 Processing RSS feed: https://krebsonsecurity.com/feed/
 ✅ Extracted 8,432 characters using selector: .entry-content
 🤖 Generating AI blog post for: Critical Vulnerability Discovered...
