@@ -1,0 +1,20 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "your_azure_storage_connection_string_here",
+    "FUNCTIONS_WORKER_RUNTIME": "python",
+    "OPENAI_API_KEY": "your_openai_api_key_here",
+    "RSS_FEEDS": "https://krebsonsecurity.com/feed/,https://www.bleepingcomputer.com/feed/,https://feeds.feedburner.com/TheHackersNews",
+    "CONTENT_MAX_LENGTH": "12000",
+    "ARTICLES_PER_FEED": "3",
+    "LOG_LEVEL": "INFO",
+    "STORAGE_CONTAINER_NAME": "articles",
+    "THREAT_KEYWORDS_CRITICAL": "zero-day,critical,emergency,widespread,global,critical vulnerability",
+    "THREAT_KEYWORDS_HIGH": "breach,ransomware,apt,exploit,vulnerability,attack,compromise",
+    "THREAT_KEYWORDS_MEDIUM": "phishing,malware,threat,security,incident"
+  },
+  "Host": {
+    "CORS": "*",
+    "CORSCredentials": false
+  }
+}
